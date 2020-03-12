@@ -1,0 +1,121 @@
+/*CAFETERÍA*/
+.main-coffee-shop{
+  width: 100%;
+  max-width: 1100px;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  justify-content: center;
+}
+
+.shop-description{
+  font-size: 20px;
+}
+
+/*SOBRE NOSOTROS*/
+.about-us{
+  display: grid;
+  grid-template-rows: minmax(200px, 400px) 60%;
+  box-sizing: border-box;
+}
+
+.hero-about-us{
+  background-image: url(../images/Coffeetime.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title-about-us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--title);
+  color: var(--white);
+}
+
+.main-about-us{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "img-beans beans-description"
+                       "roasted-description img-roasted";
+  margin-top: 40px;
+}
+
+.subtitle-about-us{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+.img-beans{
+  grid-area: img-beans;
+  box-sizing: border-box;
+  width: 100%;
+  /* padding: 5% 2% 2% 5%; */
+}
+
+.beans-description{
+  grid-area: beans-description;
+  padding: 5% 5% 5% 5%;
+  font-size: 20px;
+}
+
+.subtitle-about-us{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+.img-roasted{
+  grid-area: img-roasted;
+  box-sizing: border-box;
+  /* padding: 5% 2% 2% 5%; */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.roasted-description{
+  grid-area: roasted-description;
+  font-size: 20px;
+  padding: 2% 5% 5% 5%;
+}
+
+/* ENTREGAS */
+.main-delivery{
+  padding-bottom: 10%;
+}
+
+.container-delivery{
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.item-deliver{
+  display: block;
+  text-align: center;
+}
+
+.img-deliver img{
+  width: 180px;
+  background-color: #53b5aa;
+  border-radius: 50%;
+}
+
+.description-deliver{
+  padding: 0 10% 0 10%;
+}
+
+.description-deliver p{
+  font-size: 20px;
+}

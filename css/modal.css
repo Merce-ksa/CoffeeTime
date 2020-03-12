@@ -1,0 +1,153 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 3;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalbox{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 5px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+}
+
+.resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+}
+
+.modal:target .movedown{
+    margin:10% auto;
+}
+
+.modal:target .resize{
+  width: 80%;
+  height: 60%;
+}
+
+.close {
+  position: absolute;
+  top:2px;
+  right: 50px;
+  font-size: 50px;
+  color: #606061;
+  text-align: center;
+  text-decoration: none;
+}
+
+.close:hover {
+  font-weight: bold;
+}
+
+.modal-img img{
+  width: 90%;
+}
+
+.quantity {
+  width: 50%;
+	height: auto;
+	margin: 6px 0 0 0;
+	padding: 0;
+}
+
+.price {
+	color: #000;
+	font-weight: var(--regular);
+	margin: 0;
+	padding: 30px 0;
+}
+
+.full-price {
+	background: #53b5aa;
+	color: #fff;
+	float: right;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 49px;
+	margin: 0;
+	padding: 0 30px;
+
+	-webkit-transition: margin .15s linear;
+	-moz-transition: margin .15s linear;
+	-ms-transition: margin .15s linear;
+	-o-transition: margin .15s linear;
+	transition: margin .15s linear;
+}
+
+.qt, .qt-plus, .qt-minus {
+	display: inline-block;
+}
+
+.qt {
+  width: 70px;
+	font-size: var(--normal);
+	line-height: 50px;
+	text-align: center;
+}
+
+.qt-plus, .qt-minus {
+	background: #fcfcfc;
+	border: none;
+	font-size: var(--subtitle);
+	font-weight: var(--regular);
+	padding: 0 20px;
+	-webkit-transition: background .2s linear;
+	-moz-transition: background .2s linear;
+	-ms-transition: background .2s linear;
+	-o-transition: background .2s linear;
+	transition: background .2s linear;
+}
+
+.qt-plus:hover, .qt-minus:hover {
+	background: #53b5aa;
+	color: #fff;
+	cursor: pointer;
+}
+
+.qt-plus, .qt-minus{
+	line-height: 50px;
+}
+
+.btn {
+  display: block;
+  padding: 2% 0;
+  margin-top: 2%;
+	border: 2px solid #53b5aa;
+  border-radius: 5px;
+	cursor: pointer;
+	color: var(--black);
+	font-size: 20px;
+	font-weight: 300;
+	text-align: center;
+
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-ms-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.btn:hover {
+	color: #fff;
+	background: #53b5aa;
+}

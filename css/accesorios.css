@@ -1,0 +1,38 @@
+.container-props{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 340px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+
+.props{
+  border-radius: 5px;
+  padding: 10px;
+  background: #f7f7f5;
+  text-decoration: none;
+  color: var(--black);
+  text-align: center;
+}
+
+.props p{
+
+}
+
+.props img{
+  max-width: 100%;
+}
+
+.level1{
+  grid-row-end: span 3;
+}
+
+.level2{
+  grid-row-end: span 2;
+}
+.leve3{
+  grid-row-end: span 1;
+}
