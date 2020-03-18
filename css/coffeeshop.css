@@ -1,114 +1,110 @@
-/*CAFETERÍA*/
 .main-coffee-shop{
+  display: grid;
+  grid-template-rows: 400px 60%;
+  box-sizing: border-box;
+}
+
+.hero-coffee-shop{
+  background-image: url("../images/coffeeshop.png");
+  background-position: bottom;
+  background-size: cover;
+}
+
+.coffee-shop-description{
   width: 100%;
-  max-width: 1100px;
-  position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  justify-content: center;
+  margin: 0;
 }
 
-.shop-description{
-  font-size: 20px;
+.description {
+  margin: 0 auto;
+  padding: 0 10%;
+  font-size: var(--normal);
 }
 
-/*SOBRE NOSOTROS*/
 .about-us{
   display: grid;
-  grid-template-rows: minmax(200px, 400px) 60%;
+  grid-template-rows: 400px auto;
   box-sizing: border-box;
 }
 
 .hero-about-us{
-  background-image: url(../images/Coffeetime.png);
+  display: flex;
+  align-items: center;
+  background-image: url("../images/Coffeetime.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .title-about-us{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: var(--title);
+  margin: auto;
+  font-size: var(--title-brand);
   color: var(--white);
 }
 
 .main-about-us{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   grid-template-areas: "img-beans beans-description"
                        "roasted-description img-roasted";
-  margin-top: 40px;
+  margin-top: 5%;
 }
 
 .subtitle-about-us{
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 50px;
+  font-size: var(--title-main);
   padding-top: 30px;
+}
+
+.beans-description{
+  grid-area: beans-description;
+  padding: 0 5% 0 5%;
+  margin: auto;
+  font-size: var(--normal);
 }
 
 .img-beans{
   grid-area: img-beans;
   box-sizing: border-box;
   width: 100%;
-  /* padding: 5% 2% 2% 5%; */
-}
-
-.beans-description{
-  grid-area: beans-description;
-  padding: 5% 5% 5% 5%;
-  font-size: 20px;
-}
-
-.subtitle-about-us{
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-size: 50px;
-  padding-top: 30px;
+  margin: auto;
 }
 
 .img-roasted{
   grid-area: img-roasted;
   box-sizing: border-box;
-  /* padding: 5% 2% 2% 5%; */
   width: 100%;
-  box-sizing: border-box;
+  margin: auto;
 }
 
 .roasted-description{
   grid-area: roasted-description;
-  font-size: 20px;
-  padding: 2% 5% 5% 5%;
+  padding: 0 5% 0 5%;
+  margin: auto;
+  font-size: var(--normal);
 }
 
-/* ENTREGAS */
 .main-delivery{
   padding-bottom: 10%;
 }
 
 .container-delivery{
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  grid-gap: 20px;
 }
 
 .item-deliver{
   display: block;
   text-align: center;
+  padding: 5%;
 }
 
 .img-deliver img{
-  width: 180px;
-  background-color: #53b5aa;
+  width: 100%;
+  background-color: var(--emerald);
   border-radius: 50%;
 }
 
@@ -117,5 +113,82 @@
 }
 
 .description-deliver p{
-  font-size: 20px;
+  font-size: var(--normal);
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-coffee-shop{
+    grid-template-rows: 200px 60%;
+  }
+
+  .description {
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+
+  .main-about-us{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "img-beans"
+                         "beans-description"
+                         "img-roasted"
+                         "roasted-description";
+    margin-top: 40px;
+  }
+
+  .subtitle-about-us{
+    padding: 0;
+  }
+
+  .img-roasted{
+    margin: 5% auto 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  .title-about-us{
+    font-size: var(--title-main);
+  }
+
+  .subtitle-about-us{
+    font-size: var(--subtitle-brand);
+  }
+
+  .beans-description, .roasted-description{
+    width: 80%;
+    justify-content: center;
+    margin: 0;
+    font-size: var(--small);
+  }
+
+  .img-beans, .img-roasted{
+    width: 100%;
+    margin: 0;
+  }
+
+  .container-delivery{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 100%));
+  }
+
+  .img-deliver img{
+    width: 60%;
+  }
+
+  .description-deliver h2{
+    font-size: var(--subtitle-brand);
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .beans-description, .roasted-description{
+    width: 70%;
+    padding: 0;
+  }
+
 }
